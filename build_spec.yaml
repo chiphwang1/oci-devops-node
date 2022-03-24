@@ -28,17 +28,10 @@ steps:
 
   - type: Command
     timeoutInSeconds: 600
-    name: "Install Node Prereqs"
+    name: "Install Ruby"
     command: |
-      cd ${OCI_WORKSPACE_DIR}/node_express
-      # install nvm
-      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-      export NVM_DIR="$HOME/.nvm"
-      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-      nvm install lts/erbium
-      echo "NODE VERSION: $(node -v)"
-      echo "NPM VERSION: $(npm -v)"
-
+      yum install -y git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 \
+      autoconf automake libtool bison curl sqlite-devel ruby
     onFailure:
       - type: Command
         command: |
@@ -47,12 +40,13 @@ steps:
         timeoutInSeconds: 40
         runAs: root
   
+  
   - type: Command
     timeoutInSeconds: 600
-    name: "NPM install"
+    name: "Gem Install"
     command: |
-      cd ${OCI_WORKSPACE_DIR}/node_express
-      npm install
+     gem install rails
+     rails new tutorial
     onFailure:
       - type: Command
         command: |
@@ -60,13 +54,6 @@ steps:
           echo "Failure successfully handled"
         timeoutInSeconds: 40
         runAs: root
-
-  - type: Command
-    timeoutInSeconds: 1200
-    name: "Run Tests"
-    command: |
-      cd ${OCI_WORKSPACE_DIR}/node_express
-      npm test
 
   - type: Command
     timeoutInSeconds: 1200
@@ -81,3 +68,4 @@ outputArtifacts:
     # this location tag doesn't effect the tag used to deliver the container image
     # to the Container Registry
     location: node-express-getting-starter:latest
+
