@@ -31,7 +31,15 @@ steps:
     name: "Install Ruby"
     command: |
       yum install -y git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 
-      yum install -y autoconf automake libtool bison curl sqlite-devel ruby
+      yum install -y autoconf automake libtool bison curl sqlite-devel 
+      curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+      curl -sSL https://rvm.io/pkuczynski.asc | gpg2 --import -
+      curl -L get.rvm.io | bash -s stable
+      source /etc/profile.d/rvm.sh
+      rvm reload
+      rvm requirements run
+      rvm install 2.7
+      rvm use 2.7 --default
     onFailure:
       - type: Command
         command: |
