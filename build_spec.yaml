@@ -38,8 +38,8 @@ steps:
       source /etc/profile.d/rvm.sh
       rvm reload
       rvm requirements run
-      rvm install 2.7
-      rvm use 2.7 --default
+      rvm install ruby-2.7.2
+      rvm use 2.7.2  --default
     onFailure:
       - type: Command
         command: |
