@@ -1,19 +1,13 @@
-FROM node:12-alpine
+# Dockerfile
+# gets the docker parent image
+FROM ruby:2.6.5
 
-# following https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+RUN apt-get update && apt-get install -y npm && npm install -g yarn
 
-WORKDIR /usr/src/node-getting-started
+RUN mkdir -p /var/app
+COPY . /var/app
+WORKDIR /var/app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
-
-# If you are building your code for production
-RUN npm ci --only=production
-
-# Bundle app source
-COPY . .
-
+RUN bundle install
 EXPOSE 3000
-CMD [ "node", "./bin/www" ]
+CMD rails s -b 0.0.0.0
