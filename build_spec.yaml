@@ -67,6 +67,8 @@ steps:
     command: |
      gem install rails
      rails new tutorial
+     cd tutorial
+     rails server &
     onFailure:
       - type: Command
         command: |
