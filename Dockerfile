@@ -4,7 +4,7 @@ FROM ruby:3.0.1
 
 RUN apt-get update && apt-get install -y npm && npm install -g yarn
 
-RUN mkdir -p /var/app
+RUN mkdir -p /var/app/tutorial
 COPY ./tutorial/*  /var/app/tutorial/
 WORKDIR /var/app/turtorial
 RUN bundle install
