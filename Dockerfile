@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y npm && npm install -g yarn
 RUN mkdir -p /var/app
 COPY ./tutorial/*  /var/app/
 WORKDIR /var/app
-CMD rails new tutorial
+RUN rails new tutorial
 WORKDIR /var/app/tutorial
 RUN bundle install
 EXPOSE 3000
