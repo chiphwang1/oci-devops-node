@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y npm && npm install -g yarn
 
 RUN mkdir -p /var/app/tutorial
 COPY ./tutorial/*  /var/app/tutorial/
-WORKDIR /var/app/turtorial
+WORKDIR /var/app/tutorial
 RUN bundle install
 WORKDIR /var/app/
 RUN rails new tutorial1
