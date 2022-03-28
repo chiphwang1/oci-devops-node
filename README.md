@@ -15,7 +15,7 @@ git https://github.com/chiphwang1/oci-devops-node.git
 cd oci-devops-node
 ```
 
-## Install Ruby, Rails and create new App 
+## Install Ruby, Rails and create new application
 
 
 1. Install Ruby and Rails: https://guides.rubyonrails.org/v5.0/getting_started.html
