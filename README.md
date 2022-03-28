@@ -17,7 +17,7 @@ cd oci-devops-node
 
 ## Install Ruby and Rails 
 
-'''
+```
 yum install -y git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel
       curl -sL https://rpm.nodesource.com/setup_12.x | bash
       yum install -y nodejs
@@ -44,7 +44,7 @@ yum install -y git-core zlib zlib-devel gcc-c++ patch readline readline-devel li
       rails new tutorial
       cd tutorial
 
-'''
+```
 
 ## Build a container image for the app
 
