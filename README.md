@@ -19,7 +19,7 @@ cd oci-devops-node
 
 
 1. Install Ruby and Rails: https://guides.rubyonrails.org/v5.0/getting_started.html
-2. Generate a new Rails ppplication: 
+2. Generate a new Rails ppplication: \
    rails new demo
 4. Run the application:   
    cd demo \
