@@ -2,7 +2,7 @@
 
 This is an example project is using Ruby and the Rails web framework. You will be able to build, test and deploy this application to Oracle Container Engine for Kubernetes (OKE).
 
-In this example, you'll build a container image of this Express getting started app, and deploy your built container to the OCI Container Registry, then deploy the getting started app to Oracle Container Engine for Kubernetes (OKE) all using the OCI DevOps service!
+In this example, you'll build a container image of this sammple Rails app, and deploy your built container to the OCI Container Registry, then deploy the sample Rails app to Oracle Container Engine for Kubernetes (OKE) all using the OCI DevOps service!
 
 Let's go!
 
@@ -15,11 +15,35 @@ git https://github.com/chiphwang1/oci-devops-node.git
 cd oci-devops-node
 ```
 
-## Install Ruby and Rails and run the Rails example
+## Install Ruby and Rails 
 
-1. Install Ruby
 '''
-sudo yum install ruby
+yum install -y git-core zlib zlib-devel gcc-c++ patch readline readline-devel libyaml-devel libffi-devel openssl-devel make bzip2 autoconf automake libtool bison curl sqlite-devel
+      curl -sL https://rpm.nodesource.com/setup_12.x | bash
+      yum install -y nodejs
+      curl -sL https://dl.yarnpkg.com/rpm/yarn.repo -o /etc/yum.repos.d/yarn.repo
+      yum install -y yarn
+      cd
+      git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+      echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+      echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+      exec $SHELL
+      git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+      echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+      exec $SHELL
+      rbenv install 2.7.0
+      rbenv global 2.7.0
+      gem install bundler
+      gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+      curl -sSL https://get.rvm.io | bash -s stable
+      source /etc/profile.d/rvm.sh
+      rvm install 2.7.0
+      rvm use 2.7.0 --default
+      gem install bundler
+      gem install rails
+      rails new tutorial
+      cd tutorial
+
 '''
 
 ## Build a container image for the app
