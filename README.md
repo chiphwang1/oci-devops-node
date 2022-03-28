@@ -11,13 +11,16 @@ Let's go!
 The first step to get started is to download the repository to your local workspace
 
 ```shell
-git 
+git https://github.com/chiphwang1/oci-devops-node.git
 cd oci-devops-node
 ```
 
-## Install and run the Express example
+## Install Ruby and Rails and run the Rails example
 
-
+1. Install Ruby
+'''
+# sudo yum install ruby
+'''
 
 ## Build a container image for the app
 
