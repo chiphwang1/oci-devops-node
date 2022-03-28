@@ -17,20 +17,12 @@ cd oci-devops-node
 
 ## Install Ruby, Rails and create new App 
 
-```
-sudo apt update
-sudo apt install git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-source ~/.bashrc
-rbenv -v
-rbenv install 3.0.2
-gem install rails
-rails new tutorial
-rails server &
 
-```
+1. Install Node 12 and NPM: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm  
+2. Build the app: npm install 
+3. Run tests: npm test  
+4. Run the app: npm start 
+5. Verify the app locally, open your browser to http://localhost:3000/ or whatever port you set, if you've changed the local port 
 
 ## Build a container image for the app
 
