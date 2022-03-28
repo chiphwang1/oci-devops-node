@@ -35,6 +35,11 @@ docker build --pull --rm -t ruby-demo -f DOCKERFILE .
 
 Verify that your image was built, with `docker images` 
 
+```
+docker images ls
+
+```
+
 Next run your local container and confirm you can access the app running in the container
 ```
 docker run --rm -d -p 3000:3000 --name ruby-demo  ruby-demo:latest
