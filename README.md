@@ -20,9 +20,9 @@ cd oci-devops-node
 
 1. Install Ruby and Rails: https://guides.rubyonrails.org/v5.0/getting_started.html
 2. Generate a new Rails ppplication: rails new demo
-3. Run the application: 
+3. Run the application:   
    cd demo 
-   rails server
+   rails server 
 4. Verify the app locally, open your browser to http://localhost:3000/ or whatever port you set, if you've changed the local port 
 
 ## Build a container image for the app
