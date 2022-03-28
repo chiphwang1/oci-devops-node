@@ -19,7 +19,7 @@ cd oci-devops-node
 
 1. Install Ruby
 '''
-# sudo yum install ruby
+sudo yum install ruby
 '''
 
 ## Build a container image for the app
