@@ -18,8 +18,8 @@ cd oci-devops-node
 ## Install Ruby, Rails and create new App 
 
 
-1. Install Node 12 and NPM: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm  
-2. Build the app: npm install 
+1. Install Ruby and Rails: https://guides.rubyonrails.org/v5.0/getting_started.html
+2. Generate: npm install 
 3. Run tests: npm test  
 4. Run the app: npm start 
 5. Verify the app locally, open your browser to http://localhost:3000/ or whatever port you set, if you've changed the local port 
