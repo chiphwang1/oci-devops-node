@@ -6,20 +6,20 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-gettingstarted-deployment
+  name: rails-demo-deployment
   namespace: ${namespace}
 spec:
   selector:
     matchLabels:
-      app: node-gettingstarted
+      app: rails-demo
   replicas: 3
   template:
     metadata:
       labels:
-        app: node-gettingstarted
+        app: rails-demo
     spec:
       containers:
-        - name: node-gettingstarted
+        - name: rails-demo
           # enter the path to your image, be sure to include the correct region prefix
           image: iad.ocir.io/ociobenablement/node-express-getting-starter:${BUILDRUN_HASH}
           imagePullPolicy: Always
@@ -30,7 +30,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: node-gettingstarted-service
+  name: rails-demo-service
   namespace: ${namespace}
   annotations: 
     service.beta.kubernetes.io/oci-load-balancer-shape: "10Mbps"
@@ -41,4 +41,4 @@ spec:
       protocol: TCP
       targetPort: 3000
   selector:
-    app: node-gettingstarted
+    app: rails-demo
