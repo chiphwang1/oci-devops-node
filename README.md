@@ -1,6 +1,6 @@
 # Getting Started with OCI DevOps
 
-This is an example project using Node.js with the Express [getting started generator](https://expressjs.com/en/starter/generator.html). With the [OCI DevOps service](https://www.oracle.com/devops/devops-service/) and this project, you'll be able to build, test and deploy this application to Oracle Container Engine for Kubernetes (OKE).
+This is an example project is using Ruby and the Rails web framework. You will be able to build, test and deploy this application to Oracle Container Engine for Kubernetes (OKE).
 
 In this example, you'll build a container image of this Express getting started app, and deploy your built container to the OCI Container Registry, then deploy the getting started app to Oracle Container Engine for Kubernetes (OKE) all using the OCI DevOps service!
 
@@ -11,19 +11,13 @@ Let's go!
 The first step to get started is to download the repository to your local workspace
 
 ```shell
-git clone git@github.com:oracle-quickstart/oci-devops-node
+git 
 cd oci-devops-node
 ```
 
 ## Install and run the Express example
 
-Open a terminal and test out the simple Express example - a web app that returns a "Welcome to Express" page
 
-1. Install Node 12 and NPM: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm 
-1. Build the app: `npm install`
-1. Run tests: `npm test`
-1. Run the app: `npm start`
-1. Verify the app locally, open your browser to [http://localhost:3000/](http://localhost:3000/) or whatever port you set, if you've changed the local port
 
 ## Build a container image for the app
 
