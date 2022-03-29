@@ -63,7 +63,7 @@ steps:
   
   - type: Command
     timeoutInSeconds: 600
-    name: "Gem Install"
+    name: "Rails Install"
     command: |
      gem install rails
      rails new tutorial
