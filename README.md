@@ -38,7 +38,6 @@ Verify that your image was built, with `docker images`
 
 ```
 docker images ls
-
 ```
 
 Next run your local container and confirm you can access the app running in the container
