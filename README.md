@@ -2,7 +2,7 @@
 
 This is an example project is using Ruby and the Rails web framework. You will be able to build, test and deploy this application to Oracle Container Engine for Kubernetes (OKE).
 
-In this example, you'll build a container image of this sammple Rails app, and deploy your built container to the OCI Container Registry, then deploy the sample Rails app to Oracle Container Engine for Kubernetes (OKE) all using the OCI DevOps service!
+In this example, you'll build a container image of a sample Rails app, and deploy your built container to the OCI Container Registry, then deploy the sample Rails app to Oracle Container Engine for Kubernetes (OKE) all using the OCI DevOps service!
 
 Let's go!
 
